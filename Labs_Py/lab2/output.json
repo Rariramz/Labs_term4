@@ -1,0 +1,5 @@
+{'TYPE': 'function', 'VALUE': {'__closure__': null, '__code__': {'TYPE': 'code', 'VALUE': {'__doc__': 'code(argcount, posonlyargcount, kwonlyargcount, nlocals, stacksize,
+      flags, codestring, constants, names, varnames, filename, name,
+      firstlineno, lnotab[, freevars[, cellvars]])
+
+Create a code object.  Not for the faint of heart.', 'co_argcount': 1, 'co_cellvars': {'TYPE': 'tuple', 'VALUE': []}, 'co_code': {'TYPE': 'bytes', 'VALUE': [124, 0, 100, 1, 107, 2, 114, 12, 100, 2, 83, 0, 124, 0, 116, 0, 124, 0, 100, 2, 24, 0, 131, 1, 20, 0, 83, 0, 100, 0, 83, 0]}, 'co_consts': {'TYPE': 'tuple', 'VALUE': [null, 0, 1]}, 'co_filename': '/home/rariramz/Documents/Labs_term4/Labs_Py/lab2/main.py', 'co_firstlineno': 5, 'co_flags': 67, 'co_freevars': {'TYPE': 'tuple', 'VALUE': []}, 'co_kwonlyargcount': 0, 'co_lnotab': {'TYPE': 'bytes', 'VALUE': [0, 1, 8, 1, 4, 2]}, 'co_name': 'fact', 'co_names': {'TYPE': 'tuple', 'VALUE': ['fact']}, 'co_nlocals': 1, 'co_posonlyargcount': 0, 'co_stacksize': 4, 'co_varnames': {'TYPE': 'tuple', 'VALUE': ['n']}}}, '__globals__': {'fact': 'fact'}, '__defaults__': null, '__name__': 'fact'}}

@@ -1,0 +1,57 @@
+TYPE: function
+VALUE: 
+	__closure__: null
+	__code__: 
+		TYPE: code
+		VALUE: 
+			__doc__: 'code(argcount, posonlyargcount, kwonlyargcount, nlocals, stacksize,
+      flags, codestring, constants, names, varnames, filename, name,
+      firstlineno, lnotab[, freevars[, cellvars]])
+
+Create a code object.  Not for the faint of heart.'
+			co_argcount: 1
+			co_cellvars: 
+				TYPE: tuple
+				VALUE: []
+			co_code: 
+				TYPE: bytes
+				VALUE: 
+				- 124
+				- 0
+				- 100
+				- 1
+				- 23
+				- 0
+				- 83
+				- 0
+			co_consts: 
+				TYPE: tuple
+				VALUE: 
+				- null
+				- 1
+			co_filename: /home/rariramz/Documents/Labs_term4/Labs_Py/lab2/tests/test_objects.py
+			co_firstlineno: 6
+			co_flags: 67
+			co_freevars: 
+				TYPE: tuple
+				VALUE: []
+			co_kwonlyargcount: 0
+			co_lnotab: 
+				TYPE: bytes
+				VALUE: 
+				- 0
+				- 1
+			co_name: inc
+			co_names: 
+				TYPE: tuple
+				VALUE: []
+			co_nlocals: 1
+			co_posonlyargcount: 0
+			co_stacksize: 2
+			co_varnames: 
+				TYPE: tuple
+				VALUE: 
+				- n
+	__globals__: {}
+	__defaults__: null
+	__name__: inc
