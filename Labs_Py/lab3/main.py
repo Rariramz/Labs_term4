@@ -53,6 +53,11 @@ def home():
         if group is None:
             send_message(f"The group with name {message} does not exist", user.id)
         else:
+            if group.admin_id != user.id:
+                send_message(f"Only admin can delete the group {message}", user.id)
+                user.last_command = None
+                db.session.commit()
+                return ""
             send_message(f"You deleted {group.name}", user.id)
             delete_group(group.id, user.id)
         user.last_command = None
@@ -152,13 +157,13 @@ def delete_group(group_id, user_id): ####
 
 
 def create_group(group_name, user_id):
-    new_group = Group(name=group_name)
+    new_group = Group(name=group_name, admin_id=user_id)
     db.session.add(new_group)
     db.session.commit()
     new_user_group_rel = UserGroupRelations(user_id=user_id, group_id=new_group.id)
     db.session.add(new_user_group_rel)
     db.session.commit()
-    #join_group(new_group.id, user_id)
+    join_group(new_group.id, user_id)
 
 
 def join_group(group_id, user_id):

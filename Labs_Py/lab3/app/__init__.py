@@ -21,7 +21,7 @@ url = 'https://api.telegram.org/botTOKEN/setWebHook'
 requests.post(url, data)
 
 
-if Group.query.get(1) is None:
-    group = Group(id=1, name="main_chat")
-    db.session.add(group)
-    db.session.commit()
+# if Group.query.get(1) is None:
+#     group = Group(id=1, name="main_chat")
+#     db.session.add(group)
+#     db.session.commit()

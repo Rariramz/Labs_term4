@@ -5,4 +5,3 @@ class Config(object):
 
 TELEGRAM_BOT_TOKEN = "TOKEN"
 TELEGRAM_BOT_URL = "https://api.telegram.org"
-

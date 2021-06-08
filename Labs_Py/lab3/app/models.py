@@ -12,6 +12,7 @@ class Group(db.Model):
     __tablename__ = 'groups'
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(30), unique=True)
+    admin_id = db.Column(db.Integer)
 
 
 class UserGroupRelations(db.Model):
