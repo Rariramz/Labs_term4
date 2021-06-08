@@ -1,0 +1,27 @@
+version: "3.9"
+networks:
+  bot-network:
+    name: bot-network
+services:
+  bot-db:
+    image: postgres
+    networks:
+      - bot-network
+    environment:
+      POSTGRES_DB: illuminatenorden
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: admin
+  nginx:
+    image: rariramz/bot-nginx
+    networks:
+      - bot-network
+    ports:
+      - "5000:3865"
+  telegram-bot:
+    image: rariramz/illuminaten-bot
+    networks:
+      - bot-network
+    environment:
+      telegram_bot_token: "1840899044:AAF-X6uFxN6oyzFghj0Ub9YXDeuB-vgxWLM"
+      bot_url: "https://6b120e155b3d.ngrok.io"
+      FLASK_APP: /home/src/app/app/__init__.py

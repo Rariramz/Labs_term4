@@ -19,6 +19,11 @@ fail = '❌'
 notification = '📢'
 waiting = '✏️'
 
+if Group.query.get(1) is None:
+    group = Group(id=1, name="main_chat", admin_id=None)
+    db.session.add(group)
+    db.session.commit()
+
 
 @app.route('/', methods=["POST"])
 def home():
@@ -185,7 +190,7 @@ def join_group(group_id, user_id):
 def send_message(message, to_user_id):
     method = "sendMessage"
     token = TELEGRAM_BOT_TOKEN
-    url = TELEGRAM_BOT_URL
+    url = TELEGRAM_URL
     url = f"{url}/bot{token}/{method}"
     data = {"chat_id": to_user_id, "text": message}
     requests.post(url, data=data)
@@ -197,4 +202,5 @@ def send_message_to_group(message, user_id, group_id):
         send_message(message, user.id)
 
 
-app.run()
+print(TELEGRAM_BOT_TOKEN, BOT_URL)
+app.run(host="0.0.0.0")
