@@ -15,13 +15,13 @@ from app.models import *
 
 
 data = {
-    'url': 'https://ee2fc519b7db.ngrok.io'
+    'url': 'https://90059a42b9b1.ngrok.io'
 }
 url = 'https://api.telegram.org/botTOKEN/setWebHook'
 requests.post(url, data)
 
 
 # if Group.query.get(1) is None:
-#     group = Group(id=1, name="main_chat")
+#     group = Group(id=1, name="main_chat", admin_id=None)
 #     db.session.add(group)
 #     db.session.commit()
