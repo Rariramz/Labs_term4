@@ -1,4 +1,4 @@
 flask db init;
 flask db migrate;
 flask db upgrade;
-python /home/src/app/main.py
+python3 -u /home/src/app/backend.py
